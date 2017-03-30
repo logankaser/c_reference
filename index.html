@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang='en' class='Mih(100%) M(0) Bxz(bb)'>
+<head>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<meta charset='utf-8'>
+<link rel='stylesheet' type='text/css' href='static/type.css'>
+<link rel='stylesheet' type='text/css' href='static/style.css'>
+<link rel='stylesheet' type='text/css' href='static/defaults.css'>
+<!-- Set box sizing to inherit globaly with border-box on root element. -->
+
+<style>
+*,*:before,*:after{-moz-box-sizing:inherit;box-sizing:inherit}
+</style>
+<title>C Reference</title>
+</head>
+<body class=
+'H(100%) M(a) Maw(60rem) Px(s3)@md | Bgc(#FEFEF2) Ff(ClearSans) C(#191919)'>
+<h1 class='Ta(c)'>C Reference</h1>
+<hr>
+<h2>Language</h2>
+<ol>
+<li><a class='Fz(s3)' href='characters.html'>Characters</a>
+<ol>
+<li><a href='characters.html#trigraph'>Trigraph Characters</a></li>
+<li><a href='characters.html#escape'>Escape Sequences</a></li>
+<li><a href='characters.html#comments'>Comments</a></li>
+</ol>
+</li>
+<li><a class='Fz(s3)' href='identifiers.html'>Identifiers</a>
+<ol>
+<li><a href='identifiers.html#keywords'>Keywords</a></li>
+<li><a href='identifiers.html#variables'>Variables</a></li>
+<li><a href='identifiers.html#enum'>Enumerated Tags</a></li>
+<li><a href='identifiers.html#arrays'>Arrays</a></li>
+<li><a href='identifiers.html#struct'>Structures and Unions</a></li>
+<li><a href='identifiers.html#const'>Constants</a></li>
+<li><a href='identifiers.html#strings'>Strings</a></li>
+<li><a href='identifiers.html#sizeof'>sizeof Keyword</a></li>
+</ol>
+</li>
+<li><a class='Fz(s3)' href='functions.html'>Functions</a>
+<ol>
+<li><a href='functions.html#definition'>Definition</a></li>
+<li><a href='functions.html#startup'>Program Startup</a></li>
+</ol>
+</li>
+<li><a class='Fz(s3)' href='references.html'>References</a>
+<ol>
+<li>Pointers and the Address Operator</li>
+<li>Typecasting</li>
+</ol>
+</li>
+<li><a class='Fz(s3)' href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.5.html'>Operators</a>
+<ol>
+<li>Postfix</li>
+<li>Unary and Prefix</li>
+<li>Normal</li>
+<li>Boolean</li>
+<li>Assignment</li>
+<li>Precedence</li>
+</ol>
+</li>
+<li><a class='Fz(s3)' href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html'>Statements</a>
+<ol>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#if'>if</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#switch'>switch</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#while'>while</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#do'>do</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#for'>for</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#goto'>goto</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#continue'>continue</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#break'>break</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#return'>return</a></li>
+</ol>
+</li>
+<li><a class='Fz(s3)' href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html'>Preprocessing
+Directives</a>
+<ol>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#conditional'>#if,
+#elif, #else, #endif</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#define'>#define,
+#undef, #ifdef, #ifndef</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#include'>#include</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#line'>#line</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#error'>#error</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#pragma'>#pragma</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#macros'>Predefined
+Macros</a></li>
+</ol>
+</li>
+</ol>
+<h2>Library</h2>
+<ol>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.1.html'>assert.h</a></li>
+<li>assert</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.2.html'>ctype.h</a></li>
+<li>is... Functions</li>
+<li>to... Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.3.html'>errno.h</a></li>
+<li>EDOM</li>
+<li>ERANGE</li>
+<li>errno</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.4.html'>float.h</a></li>
+<li>Defined Values</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.5.html'>limits.h</a></li>
+<li>Defined Values</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.6.html'>locale.h</a></li>
+<li>Variables and Definitions</li>
+<li>setlocale</li>
+<li>localeconv</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html'>math.h</a></li>
+<li>Error Conditions</li>
+<li>Trigonometric Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#acos'>acos</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#asin'>asin</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#atan'>atan</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#atan2'>atan2</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#cos'>cos</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#cosh'>cosh</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#sin'>sin</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#sinh'>sinh</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#tan'>tan</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#tanh'>tanh</a></li>
+<li>Exponential, Logarithmic, and Power Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#exp'>exp</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#frexp'>frexp</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#ldexp'>ldexp</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#log'>log</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#log10'>log10</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#modf'>modf</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#pow'>pow</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#sqrt'>sqrt</a></li>
+<li>Other Math Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#ceil'>ceil</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#fabs'>fabs</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#floor'>floor</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.7.html#fmod'>fmod</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.8.html'>setjmp.h</a></li>
+<li>Variables and Definitions</li>
+<li>setjmp</li>
+<li>longjmp</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.9.html'>signal.h</a></li>
+<li>Variables and Definitions</li>
+<li>signal</li>
+<li>raise</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.10.html'>stdarg.h</a></li>
+<li>Variables and Definitions</li>
+<li>va_start</li>
+<li>va_arg</li>
+<li>va_end</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.11.html'>stddef.h</a></li>
+<li>Variables and Definitions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html'>stdio.h</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#variables'>Variables
+and Definitions</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#streams'>Streams
+and Files</a></li>
+<li>File Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#clearerr'>clearerr</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#fclose'>fclose</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#feof'>feof</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#ferror'>ferror</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#fflush'>fflush</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#fgetpos'>fgetpos</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#fopen'>fopen</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#fread'>fread</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#freopen'>freopen</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#fseek'>fseek</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#fsetpos'>fsetpos</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#ftell'>ftell</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#fwrite'>fwrite</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#remove'>remove</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#rename'>rename</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#rewind'>rewind</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#setbuf'>setbuf</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#setvbuf'>setvbuf</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#tmpfile'>tmpfile</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#tmpnam'>tmpnam</a></li>
+<li>Formatted I/O Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#printf'>...printf
+Functions</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#scanf'>...scanf
+Functions</a></li>
+<li>Character I/O Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#fgetc'>fgetc</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#fgets'>fgets</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#fputc'>fputc</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#fputs'>fputs</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#getc'>getc</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#getchar'>getchar</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#gets'>gets</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#putc'>putc</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#putchar'>putchar</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#puts'>puts</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#ungetc'>ungetc</a></li>
+<li>Error Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.12.html#perror'>perror</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html'>stdlib.h</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#variables'>Variables
+and Definitions</a></li>
+<li>String Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#atof'>atof</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#atoi'>atoi</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#atol'>atol</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#strtod'>strtod</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#strtol'>strtol</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#strtoul'>strtoul</a></li>
+<li>Memory Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#calloc'>calloc</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#free'>free</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#malloc'>malloc</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#realloc'>realloc</a></li>
+<li>Environment Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#abort'>abort</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#atexit'>atexit</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#exit'>exit</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#getenv'>getenv</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#system'>system</a></li>
+<li>Searching and Sorting Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#bsearch'>bsearch</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#qsort'>qsort</a></li>
+<li>Math Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#abs'>abs</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#div'>div</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#labs'>labs</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#ldiv'>ldiv</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#rand'>rand</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#srand'>srand</a></li>
+<li>Multibyte Functions</li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#mblen'>mblen</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#mbstowcs'>mbstowcs</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#mbtowc'>mbtowc</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#wcstombs'>wcstombs</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.13.html#wctomb'>wctomb</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html'>string.h</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#variables'>Variables
+and Definitions</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#memchr'>memchr</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#memcmp'>memcmp</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#memcpy'>memcpy</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#memmove'>memmove</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#memset'>memset</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strcat'>strcat</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strncat'>strncat</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strchr'>strchr</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strcmp'>strcmp</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strncmp'>strncmp</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strcoll'>strcoll</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strcpy'>strcpy</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strncpy'>strncpy</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strcspn'>strcspn</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strerror'>strerror</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strlen'>strlen</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strpbrk'>strpbrk</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strrchr'>strrchr</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strspn'>strspn</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strstr'>strstr</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strtok'>strtok</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.14.html#strxfrm'>strxfrm</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.15.html'>time.h</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.15.html#variables'>Variables
+and Definitions</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.15.html#asctime'>asctime</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.15.html#clock'>clock</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.15.html#ctime'>ctime</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.15.html#difftime'>difftime</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.15.html#gmtime'>gmtime</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.15.html#localtime'>localtime</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.15.html#mktime'>mktime</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.15.html#strftime'>strftime</a></li>
+<li><a href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.15.html#time'>time</a></li>
+</ol>
+<h3>Appendix</h3>
+<a href='https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/a.html'>ASCII
+Chart</a>
+<h3>Index</h3>
+<a class='Pb(s1)' href=
+'https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/index2.html'>Index</a>
+</body>
+</html>

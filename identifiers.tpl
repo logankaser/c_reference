@@ -1,0 +1,555 @@
+<apply template=_layout>
+  <head>
+    <title>Indentifiers</title>
+  </head>
+  <a href=index.html class="Fz(s3) Pos(a)">&larr; Index</a>
+  <h1 class=Ta(c)>Indentifiers</h1>
+  <hr>
+  <h2 id=keywords>2.1 Keywords</h2>
+  <p>
+    The following keywords are reserved and may not be used as an 
+    identifier for any other purpose.
+  </p>
+  <table class="M(a) | Ff(FiraMono)">
+  <tbody>
+  <tr>
+    <td>auto</td>
+    <td>double</td>
+    <td>int</td>
+    <td>long</td>
+  </tr>
+  <tr>
+    <td>break</td>
+    <td>else</td>
+    <td>long</td>
+    <td>switch</td>
+  </tr>
+  <tr>
+    <td>case</td>
+    <td>enum</td>
+    <td>register</td>
+    <td>typedef</td>
+  </tr>
+  <tr>
+    <td>char</td>
+    <td>extern</td>
+    <td>return</td>
+    <td>union</td>
+  </tr>
+  <tr>
+    <td>const</td>
+    <td>float</td>
+    <td>short</td>
+    <td>unsigned</td>
+  </tr>
+  <tr>
+    <td>continue</td>
+    <td>for</td>
+    <td>signed</td>
+    <td>void</td>
+  </tr>
+  <tr>
+    <td>default</td>
+    <td>goto</td>
+    <td>sizeof</td>
+    <td>volatile</td>
+  </tr>
+  <tr>
+    <td>do</td>
+    <td>if</td>
+    <td>static</td>
+    <td>while</td>
+  </tr>
+  </tbody>
+  </table>
+
+  <h2 id=variables>2.2 Variables</h2>
+  <p>
+    A variable may be defined using any uppercase or lowercase character,
+    a numerical digit
+    (0 through 9), and the underscore character (_).  The first character 
+    of the variable may not be a
+    numerical digit or underscore.  Variable names are case sensitive.
+  </p>
+  <p>
+    The scope of the variable (where it can be used), is determined 
+    by where it is defined. If
+    it is defined outside any block or list of parameters, then it has 
+    <i>file scope</i>. This means it may be
+    accessed anywhere in the current source code file. This is normally 
+    called a global variable and
+    is normally defined at the top of the source code. All other types 
+    of variables are local variables.
+    If a variable is defined in a block (encapsulated with <code>{</code> 
+    and <code>}</code>), then its scope begins when the
+    variable is defined and ends when it hits the terminating 
+    <code>}</code>.  This is called <i>block scope</i>. If the
+    variable is defined in a function prototype, then the variable may 
+    only be accessed in that function.
+    This is called <i>function prototype scope</i>.
+  </p>
+  <p>
+    Access to variables outside of their file scope can be made by using 
+    <i>linkage</i>. Linkage is
+    done by placing the keyword <code>extern</code> prior to a variable 
+    declaration. This allows a variable that is
+    defined in another source code file to be accessed.
+  </p>
+  <p>
+    Variables defined within a function scope have <i>automatic storage 
+    duration</i>. The life of
+    the variable is determined by the life of the function.  Space is 
+    allocated at the beginning of the
+    function and terminated at the end of the function.  <i>Static storage 
+    duration</i> can be obtained by
+    placing the keyword <code>static</code> in front of the variable 
+    declaration.  This causes the variable's space
+    to be allocated when the program starts up and is kept during the life of 
+    the program.  The value
+    of the variable is preserved during subsequent calls to the function that 
+    defines it.  Variables
+    with file scope are automatically static variables.
+  </p>
+  <h3>Variable Definition</h3>
+  <p>
+    A variable is defined by the following:
+    <b>storage-class-specifier</b>, <b>type-specifier</b>, and <b>variable-names</b>
+  </p>
+  <p class=Mb(s04)>The <b>storage-class-specifier</b> can be one of the following:</p>
+  <table>
+  <tbody class=Va(t)>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">typedef</td>
+    <td>
+      The symbol name "<i>variable-name</i>" becomes a type-specifier
+      of type "<i>type-specifier</i>".  No variable is actually created, 
+      this is merely for convenience.
+    </td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">extern</td>
+    <td>Indicates that the variable is defined outside of the
+       current file.  This brings the variables scope into the current 
+       scope.  No variable is actually created by this.</td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">static</td>
+    <td>
+      Causes a variable that is defined within a function to be 
+      preserved in subsequent calls to the function.
+    </td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">auto</td>
+    <td>Causes a local variable to have a local lifetime (default).</td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">register</td>
+    <td>
+      Requests that the variable be accessed as quickly as
+      possible.  This request is not guaranteed.  Normally, the variable's 
+      value is kept within a CPU register for maximum speed.</td>
+  </tr>
+  </tbody>
+  </table>
+
+  <p class=Pb(s04)>The <b>type-specifier</b> can be one of the following:</p>
+  <table>
+  <tbody class=Va(t)>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">void</td>
+    <td>Defines an empty or NULL value whose type is incomplete.</td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">char, signed char</td>
+    <td>
+      Variable is large enough to store a basic character in the 
+      character set.  The value is either signed or nonnegative.
+    </td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">unsigned char</td>
+    <td>Same as char, but unsigned values only.</td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">short, signed short, short int, signed short int</td>
+    <td>
+      Defines a short signed integer.  May be the same range as a
+      normal int, or half the bits of a normal int.
+    </td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">unsigned short, unsigned short int</td>
+    <td>Defines an unsigned short integer.</td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">int, signed, signed int, or no type specifier</td>
+    <td>
+      Defines a signed integer. If no type specifier is given,   
+      then this is the default.
+    </td>
+  </tr>
+  <tr>
+    <td class="FiraMono Fw(b)">unsigned int, unsigned</td>
+    <td>Same as int, but unsigned values only.</td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">long, signed long, long int, signed long int</td>
+    <td>
+      Defines a long signed integer.  May be twice the bit size  
+      as a normal int, or the same as a normal int.
+    </td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">unsigned long, unsigned long int</td>
+    <td>Same as long, but unsigned values only.</td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">float</td>
+    <td>
+      A floating-point number.  Consists of a sign, a mantissa 
+      (number greater than or equal to 1), and an exponent.  The 
+      mantissa is taken to the power of the exponent then given the  
+      sign.  The exponent is also signed allowing extremely small 
+      fractions.  The mantissa gives it a finite precision.
+    </td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">double</td>
+    <td>
+      A more accurate floating-point number than float.  Normally 
+      twice as many bits in size.
+    </td>
+  </tr>
+  <tr>
+    <td class="Ff(FiraMono) Fw(b)">long double</td>
+    <td>Increases the size of double.</td>
+  </tr>
+  </tbody>
+  </table>
+  <p>
+    Here are the maximum and minimum sizes of the type-specifiers on 
+    most common implementations.  Note: some implementations may be 
+    different.
+  </p>
+  <table class=Ff(FiraMono)>
+  <tbody>
+  <tr>
+    <td><b>Type</b></td>
+    <td><b>Size</b></td>
+    <td><b>Range</b></td>
+  </tr>
+  <tr>
+    <td class="Fw(b)">unsigned char</td>
+    <td>8 bits</td>
+    <td class=Bdl(d,1px,grey-7)>0 to 255</td>
+  </tr>
+  <tr>
+    <td class="Fw(b)">char</td>
+    <td>8 bits</td>
+    <td class=Bdl(d,1px,grey-7)>-128 to 127</td>
+  </tr>
+  <tr>
+    <td class="Fw(b)">unsigned int</td>
+    <td>16 bits</td>
+    <td class=Bdl(d,1px,grey-7)>0 to 65,535</td>
+  </tr>
+  <tr>
+    <td class="Fw(b)">short int</td>
+    <td>16 bits</td>
+    <td class=Bdl(d,1px,grey-7)>-32,768 to 32,767</td>
+  </tr>
+  <tr>
+    <td class="Fw(b)">int</td>
+    <td>16 bits</td>
+    <td class=Bdl(d,1px,grey-7)>-32,768 to 32,767</td>
+  </tr>
+  <tr>
+    <td class="Fw(b)">unsigned long</td>
+    <td>32 bits</td>
+    <td class=Bdl(d,1px,grey-7)>0 to 4,294,967,295</td>
+  </tr>
+  <tr>
+    <td class="Fw(b)">long</td>
+    <td>32 bits</td>
+    <td class=Bdl(d,1px,grey-7)>-2,147,483,648 to 2,147,483,647</td>
+  </tr>
+  <tr>
+    <td class="Fw(b)">float</td>
+    <td>32 bits</td>
+    <td class=Bdl(d,1px,grey-7)>1.17549435 * (10^-38) to 3.40282347 * (10^+38)</td>
+  </tr>
+  <tr>
+    <td class="Fw(b)">double</td>
+    <td>64 bits</td>
+    <td class=Bdl(d,1px,grey-7)>2.2250738585072014 * (10^-308) to 1.7976931348623157 * (10^+308)</td>
+  </tr>
+  <tr>
+    <td class="Fw(b)">long double</td>
+    <td>80 bits</td>
+    <td class=Bdl(d,1px,grey-7)>3.4 * (10^-4932) to 1.1 * (10^4932)</td>
+  </tr>
+  </tbody>
+  </table> 
+  <h4>For Example,</h4>
+  <blockquote>
+    <p>
+      <code>int bob=32;</code><br>
+      Creates variable "bob" and initializes it to the value 32.
+    </p>
+    <p>
+      <code>char loop1,loop2,loop3='\x41';</code><br>
+      Creates three variables.  The value of "loop1" and "loop2" 
+      is undefined.  The value of loop3 is the letter "A".
+    </p>
+    <p>
+      <code>typedef char boolean;</code><br>
+      Causes the keyword "boolean" to represent variable-type "char".
+    </p>
+    <p>
+      <code>boolean yes=1;</code><br>
+      Creates variable "yes" as type "char" and sets its value to 1.
+    </p>
+  </blockquote>
+  
+  <h2 id=enum>2.3 Enumerated Tags</h2>
+  <p>
+    Enumeration allows a series of constant integers to be easily 
+    assigned. The format to create a enumeration specifier is:
+  </p>
+  <blockquote>
+    <code>enum </code><i>identifier</i><code> 
+    {</code><i>enumerator-list</i><code>};</code><br>
+    <i>Identifier</i> is a handle for identification, and is optional.<br>
+    <i>Enumerator-list</i> is a list of variables to be created.  They 
+    will be constant integers. Each variable is given the value of the 
+    previous variable plus 1. The first variable is given the value of 0.
+  </blockquote>
+  <h4>For Example,</h4>
+  <blockquote>
+    <code>enum {joe, mary, bob, fran};</code><br>
+    Creates 4 variables.  The value of joe is 0, mary is 1,
+    bob is 2, and fran is 3.<br>
+    <br>
+    <code>enum test {larry, floyd=20, ted};</code><br>
+    Creates 3 variables with the identifier test.  The value of larry is 
+    0, floyd is 20, and ted is 21.
+  </blockquote>
+  <h2 id=arrays>2.4 Arrays</h2>
+  <p>
+  Arrays create single or multidimensional matrices.  They are defined 
+  by appending an integer encapsulated in brackets at the end of a variable 
+  name.  Each additional set of brackets defines an additional dimension to 
+  the array.  When addressing an index in the array, indexing
+  begins at 0 and ends at 1 less than the defined array.  If no initial 
+  value is given to the array size, then the size is determined by the 
+  initializers.  When defining a multidimensional array, nested
+  curly braces can be used to specify which dimension of the array to 
+  initialize.  The outermost nest of curly braces defines the leftmost 
+  dimension, and works from left to right.
+  </p>
+  <h4>For Example,</h4>
+  <blockquote>
+    <code>int x[5];</code>
+    <p class=Mt(s04)>
+      Defines 5 integers starting at x[0], and ending at x[4].  
+      Their values are undefined.
+    </p>
+    <code>char str[16]="Blueberry";</code>
+    <p class=Mt(s04)>
+      Creates a string. The value at str[8] is the character 
+      "y". The value at str[9] is the null character. The values 
+      from str[10] to str[15] are undefined.<br>
+    </p>
+    <code>char s[]="abc";</code>
+    <p class=Mt(s04)>
+      Dimensions the array to 4 (just long enough to hold the 
+      string plus a null character), and stores the string in the array.<br>
+    </p>
+    <code>int y[3]={4};</code>
+    <p class=Mt(s04)>
+      Sets the value of y[0] to 4 and y[1] and y[2] to 0.<br>
+    </p>
+<pre>
+int joe[4][5]={
+  {1,2,3,4,5},
+  {6,7,8,9,10},
+  {11,12,13,14,15}
+};
+</pre>
+    <p class=Mt(s04)>
+      The first row initializes joe[0], the second row joe[1] and so 
+      forth.  joe[3] is initialized to 5 zeros.
+    </p>
+    The same effect is achieved by:<br>
+    <code>int joe[4][5]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15};</code>
+  </blockquote>
+  
+  <h2 id=struct>2.5 Structures and Unions</h2>
+  <p>
+    Structures and unions provide a way to group common variables 
+    together. To define a structure use:
+  </p>
+  <blockquote>
+<pre>
+struct <i>structure-name</i> {
+  <i>variables,...</i>
+  } <i>structure-variables,...</i>;
+</pre>
+  </blockquote>
+  <p>
+    <i>Structure-name</i> is optional and not needed if the structure 
+    variables are defined.  Inside it can contain any number of 
+    variables separated by semicolons.  At the end,  
+    <i>structure-variables</i> defines the actual names of the 
+    individual structures. Multiple structures can be defined by 
+    separating the variable names with commas.  If no 
+    <i>structure-variables</i> are given, no variables are created.  
+    <i>Structure-variables</i> can be defined separately by specifying:<br>
+  </p>
+  <blockquote>
+     <code>struct <i>structure-name new-structure-variable</i>;</code>
+  </blockquote>
+  <p>
+    <i>new-structure-variable</i> will be created and will have a separate 
+    instance of all the variables in <i>structure-name</i>.<br>
+  </p>
+  <p>
+    To access a variable in the structure, you must use a record 
+    selector `<code>.</code>`.<br>
+  </p>
+  <p>
+    Unions work in the same way as structures except that all variables 
+    are contained in the same location in memory.  Enough space is allocated 
+    for only the largest variable in the union. All other variables must 
+    share the same memory location.  Unions are defined using the union
+    keyword.
+  </p>
+  <h4>For Example,</h4>
+  <blockquote>
+<pre>
+  struct my-structure {
+  int fred[5];
+  char wilma, betty;
+  float barny=1;
+};
+</pre>
+    This defines the structure my-structure, but nothing has yet been done.<br><br>
+    <code>struct my-structure account1;</code><br>
+    This creates account1 and it has all of the variables from 
+    my-structure.  account1.barny contains the value "1".<br><br>
+<pre>
+union my-union {
+  char character_num;
+  int integer_num;
+  long long_num;
+  float float_num;
+  double double_num;
+} number;
+</pre>
+    This defines the union number and allocates just enough space for 
+    the variable double_num.<br><br>
+    <code>number.integer_num=1;</code><br>
+    Sets the value of integer_num to `1`.<br>
+    <code>number.float_num=5;</code><br>
+    Sets the value of float_num to `5`.<br>
+    <code>printf("%i",integer_num);</code><br>
+    This is undefined since the location of integer_num was overwritten 
+    in the previous line by float_num.
+  </blockquote>
+  <h2 id=const>2.6 Constants</h2>
+  <p>
+    Constants provide a way to define a variable which cannot be 
+    modified by any other part in the code.  Constants can be defined by 
+    placing the keyword <code>const</code> in front of any variable
+    declaration.  If the keyword <code>volatile</code> is placed after 
+    <code>const</code>, then this allows external routines to modify the 
+    variable (such 
+    as hardware devices).  This also forces the compiler to retrieve the
+    value of the variable each time it is referenced rather than possibly 
+    optimizing it in a register.
+  </p>
+  <p>
+    Constant numbers can be defined in the following way:
+  </p>
+  <blockquote>
+    Hexadecimal constant:
+  <blockquote>
+    <code>0x </code><i>hexadecimal digits...</i><br>
+    Where <i>hexadecimal digits</i> is any digit or any letter 
+    <code>A</code> through <code>F</code> or <code>a</code> 
+    through <code>f</code>.
+  </blockquote>
+  Decimal constant:
+  <blockquote>
+    Any number where the first number is not zero.
+  </blockquote>
+  Octal constant:
+  <blockquote>
+    Any number where the first number must be zero.
+  </blockquote>
+  Floating constant:
+  <blockquote>
+    A fractional number, optionally followed by either 
+    <code>e</code> or <code>E</code> then the exponent.
+  </blockquote>
+  The number may be suffixed by:<br>
+  <code>U</code> or <code>u</code>:
+  <blockquote>
+    Causes the number to be an unsigned long integer.
+  </blockquote>
+  <code>L</code> or <code>l</code>:
+  <blockquote>
+    If the number is a floating-point number, then it is a long 
+    double, otherwise it is an unsigned long integer.
+  </blockquote>
+  <code>F</code> or <code>f</code>:
+  <blockquote>
+    Causes the number to be a floating-point number.
+  </blockquote>
+  </blockquote>
+  <h4>For Example,</h4>
+  <blockquote>
+    <code>const float PI=3.141;</code><br>
+    Causes the variable PI to be created with value 3.141.  
+    Any subsequent attempts to write to PI are not allowed.<br>
+    <br>
+    <code>const int joe=0xFFFF;</code><br>
+    Causes joe to be created with the value of 65535 decimal.<br>
+    <br>
+    <code>const float penny=7.4e5;</code><br>
+    Causes penny to be created with the value of 740000.000000.
+  </blockquote>
+  <h2 id=strings>2.7 Strings</h2>
+  <p>
+    Strings are simply an array of characters encapsulated in double 
+    quotes.  At the end of the string a null character is appended.
+  </p>
+  <h4>For Example,</h4>
+  <blockquote>
+    <code>"\x41"</code> and <code>"A"</code> are the same 
+    string.<br>
+    <br>
+    <code>char fred[25]="He said, \"Go away!\"";</code><br>
+    The value at fred[9] is a double quote.  The value at fred[20] is 
+    the null character.
+  </blockquote>
+  <h2 id=sizeof>2.8 sizeof Keyword</h2>
+  Declaration:
+  <blockquote>
+    <code>size_t sizeof </code><i>expression</i>
+  </blockquote>
+  <i>or</i>
+  <blockquote>
+    <code>size_t sizeof (</code><i>type</i><code>)</code>
+  </blockquote>
+  The sizeof keyword returns the number of bytes of the given 
+  expression or type.<br>
+  <code>size_t</code> is an unsigned integer result.
+  <h4>For Example,</h4>
+  <blockquote> 
+    <code>printf("The number of bytes in an int is %d.\n",sizeof(int));</code>
+  </blockquote>
+  <hr>
+  <a href=index.html class="Fz(s3) Pb(s1)">&larr; Index</a>
+</apply>
