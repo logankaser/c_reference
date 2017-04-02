@@ -1,6 +1,6 @@
 <apply template=_layout>
   <head>
-    <title>Indentifiers</title>
+    <title>2/Indentifiers</title>
   </head>
   <a href=index.html class="Fz(s3) Pos(a)">&larr; Index</a>
   <h1 class=Ta(c)>Indentifiers</h1>
@@ -318,8 +318,7 @@
     assigned. The format to create a enumeration specifier is:
   </p>
   <blockquote>
-    <code>enum </code><i>identifier</i><code> 
-    {</code><i>enumerator-list</i><code>};</code><br>
+    <code>enum <i>identifier</i> { <i>enumerator-list</i> };</code><br>
     <i>Identifier</i> is a handle for identification, and is optional.<br>
     <i>Enumerator-list</i> is a list of variables to be created.  They 
     will be constant integers. Each variable is given the value of the 
@@ -392,10 +391,10 @@ int joe[4][5]={
   </p>
   <blockquote>
 <pre>
-struct <i>structure-name</i> {
-  <i>variables,...</i>
-  } <i>structure-variables,...</i>;
-</pre>
+<code>struct structure-name {
+  variables,...
+  } structure-variables,...;
+</code></pre>
   </blockquote>
   <p>
     <i>Structure-name</i> is optional and not needed if the structure 
@@ -428,25 +427,25 @@ struct <i>structure-name</i> {
   <h4>For Example,</h4>
   <blockquote>
 <pre>
-  struct my-structure {
+<code>struct my-structure {
   int fred[5];
   char wilma, betty;
   float barny=1;
 };
-</pre>
+</code></pre>
     This defines the structure my-structure, but nothing has yet been done.<br><br>
     <code>struct my-structure account1;</code><br>
     This creates account1 and it has all of the variables from 
     my-structure.  account1.barny contains the value "1".<br><br>
 <pre>
-union my-union {
+<code>union my-union {
   char character_num;
   int integer_num;
   long long_num;
   float float_num;
   double double_num;
 } number;
-</pre>
+</code></pre>
     This defines the union number and allocates just enough space for 
     the variable double_num.<br><br>
     <code>number.integer_num=1;</code><br>
