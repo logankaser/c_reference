@@ -46,27 +46,28 @@
   </ol>
   <li><a class=Fz(s3) href=statements.html>Statements</a>
   <ol>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#if">if</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#switch">switch</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#while">while</a>  
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#do">do</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#for">for</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#goto">goto</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#continue">continue</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#break">break</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.6.html#return">return</a>
+    <li><a href=statements.html#if>if</a>
+    <li><a href=statements.html#switch>switch</a>
+    <li><a href=statements.html#while>while</a>
+    <li><a href=statements.html#do>do</a>
+    <li><a href=statements.html#for>for</a>
+    <li><a href=statements.html#goto>goto</a>
+    <li><a href=statements.html#continue>continue</a>
+    <li><a href=statements.html#break>break</a>
+    <li><a href=statements.html#return>return</a>
   </ol>
   <li><a class=Fz(s3) href=preprocessing.html>Preprocessing Directives</a>
   <ol>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#conditional">#if, #elif, #else, #endif</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#define">#define, #undef, #ifdef, #ifndef</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#include">#include</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#line">#line</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#error">#error</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#pragma">#pragma</a>
-    <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/1.7.html#macros">Predefined Macros</a>
+    <li><a href=preprocessing.html#conditional>#if, #elif, #else, #endif</a>
+    <li><a href=preprocessing.html#define>#define, #undef, #ifdef, #ifndef</a>
+    <li><a href=preprocessing.html#include>#include</a>
+    <li><a href=preprocessing.html#line>#line</a>
+    <li><a href=preprocessing.html#error>#error</a>
+    <li><a href=preprocessing.html#pragma>#pragma</a>
+    <li><a href=preprocessing.html#macros>macros</a>
   </ol>
 </ol>
+<ignore>
 <h2>Library</h2>
 <ol>
 <li><a href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/2.1.html">assert.h</a>
@@ -247,5 +248,5 @@
 
 <h3>Index</h3>
 <a class=Pb(s1) href="https://www-s.acm.illinois.edu/webmonkeys/book/c_guide/index2.html">Index</a>
-
+</ignore>
 </apply>

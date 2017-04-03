@@ -11,13 +11,12 @@
 <h2 id=definition>3.1 Function Definition</h2>
 <p>A function is declared in the following manner:</p>
 <blockquote>
-<i>return-type function-name </i><code>(</code><i> parameter-list,...</i>
-<code>) { </code><i>body...</i> <code>}</code></blockquote>
-<i>return-type</i> is the variable type that the function returns. This can not
+<code>return-type function-name ( parameter-list,...) { body... }</code></blockquote>
+<b>return-type</b> is the variable type that the function returns. This can not
 be an array type or a function type. If not given, then <code>int</code>
 is assumed.
-<p><i>function-name</i> is the name of the function.</p>
-<p><i>parameter-list</i> is the list of parameters that the function takes
+<p><b>function-name</b> is the name of the function.</p>
+<p><b>parameter-list</b> is the list of parameters that the function takes
 separated by commas. If no parameters are given, then the function does not
 take any and should be defined with an empty set of parenthesis or with the
 keyword <code>void</code>. If no variable type is in front of a variable
@@ -30,10 +29,11 @@ using an ellipsis.</p>
 <p>If the function is accessed before it is defined, then it must be prototyped
 so the compiler knows about the function. Prototyping normally occurs at the
 beginning of the source code, and is done in the following manner:</p>
-<blockquote><i>return-type
-function-name</i><code>(</code><i>paramater-type-list</i><code>);</code></blockquote>
-<i>return-type</i> and <i>function-name</i> must correspond exactly to the
-actual function definition. <i>parameter-type-list</i> is a list separated by
+<blockquote><code>
+return-type function-name ( paramater-type-list );
+</code></blockquote>
+<b>return-type</b> and <b>function-name</b> must correspond exactly to the
+actual function definition. <b>parameter-type-list</b> is a list separated by
 commas of the types of variable parameters. The actual names of the parameters
 do not have to be given here, although they may for the sake of clarity.
 <h4>For Example,</h4>
